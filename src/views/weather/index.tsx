@@ -3,7 +3,7 @@ import { useSearchParams } from "next/navigation";
 import { supportRegionNameMap, supportRegionSchema } from "./schema";
 import { WeatherSection } from "./weather-section";
 
-export default async function WeatherPage() {
+export default function WeatherPage() {
 	const searchParams = useSearchParams();
 	const region = searchParams.get("region");
 	if (!region) {
