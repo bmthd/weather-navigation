@@ -1,11 +1,5 @@
 import { z } from "@zod/mini";
 
-// const supportRegionSchema = z.pipe(
-//   z.string(),
-//   z.transform((val) => val.toUpperCase()),
-//   z.enum(["Tokyo", "Hyogo", "Oita", "Hokkaido"])
-// )
-
 export const supportRegionSchema = z.enum(["Tokyo", "Hyogo", "Oita", "Hokkaido"]);
 
 export type SupportRegion = z.infer<typeof supportRegionSchema>;
