@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { supportRegionNameMap } from "../weather/schema";
 
-export const Home = () => {
+export default function Home() {
 	return (
 		<div>
 			<h1>地域リスト</h1>
