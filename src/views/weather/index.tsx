@@ -1,5 +1,6 @@
 "use client";
 import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 import { supportRegionNameMap, supportRegionSchema } from "./schema";
 import { WeatherSection } from "./weather-section";
 
@@ -19,7 +20,9 @@ export default function WeatherPage() {
 	return (
 		<div>
 			<h1>{supportRegionNameMap[regionName]}の天気予報</h1>
-			<WeatherSection region={regionName} />
+			<Suspense fallback={<div>Loading...</div>}>
+				<WeatherSection region={regionName} />
+			</Suspense>
 		</div>
 	);
 }
