@@ -13,8 +13,8 @@ export type WeatherData = {
 			humidity: number;
 		};
 		weather: Array<{
-      id: number;
-      main: string;
+			id: number;
+			main: string;
 			icon: string;
 			description: string;
 		}>;
